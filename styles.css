@@ -1,0 +1,144 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #eef3fa, #dfe9f4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Abstract shape 1 */
+body::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Abstract shape 2 */
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(170, 200, 255, 0.5);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.main-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.form-group,
+.result-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:read-only {
+  background: #f9f9f9;
+  color: #666;
+}
+
+button {
+  padding: 12px 20px;
+  background: #6a11cb; /* Button background matches gradient */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2575fc; /* Lighter hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}

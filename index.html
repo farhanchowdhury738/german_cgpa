@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>CGPA to German Grade Calculator</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="card">
+      <h1>CGPA to German Grade</h1>
+      <p>Convert your CGPA to the German grading system</p>
+      <form id="cgpaForm">
+        <div class="form-group">
+          <label for="achieved-cgpa">Achieved CGPA</label>
+          <input type="number" id="achieved-cgpa" name="achieved-cgpa" step="0.01" placeholder=" " required>
+        </div>
+
+        <div class="form-group">
+          <label for="min-cgpa">Minimum Passing CGPA</label>
+          <input type="number" id="min-cgpa" name="min-cgpa" step="0.01" placeholder=" " required>
+        </div>
+
+        <div class="result-group">
+          <label for="german-cgpa">German Grade</label>
+          <input type="text" id="german-cgpa" name="german-cgpa" readonly>
+        </div>
+
+        <div class="result-group">
+          <label for="interpretation">Interpretation</label>
+          <input type="text" id="interpretation" name="interpretation" readonly>
+        </div>
+
+        <button type="button" id="calculateBtn">Calculate</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
